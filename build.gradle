@@ -1,0 +1,112 @@
+//plugins {
+//    id 'org.springframework.boot' version '2.1.4.RELEASE'
+//}
+
+group 'GebProject'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'war'
+//apply plugin: 'io.spring.dependency-management'
+
+//
+//apply plugin: 'idea'
+//apply plugin: 'maven'
+//apply plugin: 'war'
+//apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+
+
+//sourceCompatibility = 1.8
+sourceCompatibility = 11
+//group = 'pl.samouczekprogramisty.kursaplikacjewebowe'
+//version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile("io.github.bonigarcia:webdrivermanager:3.3.0")
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.3-groovy-2.4'
+    testCompile "org.gebish:geb-spock:2.2"
+    testCompile("io.github.bonigarcia:webdrivermanager:3.2.0") {
+        exclude group: 'org.seleniumhq.selenium'
+    }
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.14.0'
+}
+
+test {
+    useTestNG()
+    useJUnitPlatform()
+    systemProperty 'some.prop', 'value'
+
+    // explicitly include or exclude tests
+    include 'org/foo/**'
+    exclude 'org/boo/**'
+
+    // show standard out and standard error of the test JVM(s) on the console
+    testLogging.showStandardStreams = true
+
+    // set heap size for the test JVM(s)
+    minHeapSize = "128m"
+    maxHeapSize = "512m"
+
+    // set JVM arguments for the test JVM(s)
+    jvmArgs '-XX:MaxPermSize=256m'
+
+    // listen to events in the test execution lifecycle
+    beforeTest { descriptor ->
+        logger.lifecycle("Running test: " + descriptor)
+    }
+
+    // Fail the 'test' task on the first test failure
+    failFast = true
+
+    // listen to standard out and standard error of the test JVM(s)
+    onOutput { descriptor, event ->
+        logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message )
+    }
+}
+
+
+
+task wrapper(type: Wrapper) {
+    group 'Wrapper'
+    description 'Taki tam opis'
+    gradleVersion '4.10'
+}
+
+//////////////////////////////////////////////////////
+//test {
+//     if (project.hasProperty('maxParallelFroks'))
+//         maxParallelForks = project.maxParallelForks as int
+//    if (project.hasProperty('forkEvery'))
+//         forkEvery = project.forkEvery as int
+//}
+//
+//packages  = 10
+//tests = 30
+
+//task createTests << {
+//    (0..packages).each {packageCounter ->
+//        def packageName = "gradletest${packageCouner}"
+//        (0..tests).each { classCounter ->
+//            def testClassName = "Gradle${classCounter}Test"
+//            copy {
+//                from 'src/templates'
+//                into 'src/test/java'
+//                expand([packageName: packageName, testClassName: testClassName])
+//                rename '(.*).java', packageName + '/' + testClassName + '.java'
+//                include 'SampleTest.java'
+//            }
+//        }
+//    }
+//}
+
+
+
+
+

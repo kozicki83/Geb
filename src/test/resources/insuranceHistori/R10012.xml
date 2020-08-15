@@ -1,0 +1,78 @@
+<!--referenceDate=2017-12-11-->
+<n:pobierzHistorieUbezpieczenResponse xmlns:n="http://www.sas.com/xml/namespace/biwebservices">
+    <n:pobierzHistorieUbezpieczenResult>
+        <n:Streams>
+            <n:ostream contentType="text/html;charset=utf-8">
+                <n:Value>
+                    <odp:ODPOWIEDZI xmlns:odp="http://ufg.pl/xsd/odpowiedz">
+                        <ODPOWIEDZ>
+                            <ZNAK_SPRAWY_ZAKLADU>K100119912</ZNAK_SPRAWY_ZAKLADU>
+                            <TYP_ZNAKU_SPRAWY>U</TYP_ZNAKU_SPRAWY>
+                            <PRZEDMIOT_ZAPYTANIA>
+                                <PODMIOT>
+                                    <TYP_PODMIOTU>
+                                        <REZYDENT>
+                                            <PRYWATNY>
+                                                <NAZWISKO>ZAWADZKI</NAZWISKO>
+                                                <IMIE>STANISŁAW</IMIE>
+                                                <PESEL>${pesel}</PESEL>
+                                            </PRYWATNY>
+                                        </REZYDENT>
+                                    </TYP_PODMIOTU>
+                                </PODMIOT>
+                            </PRZEDMIOT_ZAPYTANIA>
+                            <NR_ZAPYTANIA>OI/PHU/3/98014473200001</NR_ZAPYTANIA>
+                            <POSIADA_WIECEJ_POLIS>N</POSIADA_WIECEJ_POLIS>
+                            <ODPOWIEDZ_POZYTYWNA ODPOWIEDZ_OGRANICZONA="N">
+                                <METRYCZKA>
+                                    <ELEMENT_ODPOWIEDZI>
+                                        <NUMER>1002767264~2016</NUMER>
+                                        <RODZAJ_POLISY>OC</RODZAJ_POLISY>
+                                        <RODZAJ_POLISY_DETAL>K</RODZAJ_POLISY_DETAL>
+                                        <KOD_ZU_WYSTAWCA>00100001</KOD_ZU_WYSTAWCA>
+                                        <KOD_ZU_ODPOWIEDZIALNY>00100001</KOD_ZU_ODPOWIEDZIALNY>
+                                        <KLASA_POJAZDU>R</KLASA_POJAZDU>
+                                        <NR_REJESTRACYJNY>${licencePlate}</NR_REJESTRACYJNY>
+                                        <NR_VIN>${vin}</NR_VIN>
+                                        <MARKA>MERCEDES-BENZ</MARKA>
+                                        <RODZAJ_POJAZDU>SAMOCHÓD OSOBOWY</RODZAJ_POJAZDU>
+                                        <MODEL>KLASA C [HO 202] 93-97</MODEL>
+                                        <LICZBA_WLASCICIELI>1</LICZBA_WLASCICIELI>
+                                        <OD_DNIA>2017-12-12</OD_DNIA>
+                                        <DO_DNIA>2018-09-18</DO_DNIA>
+                                        <ZDARZENIA>0</ZDARZENIA>
+                                        <SZKODY>0</SZKODY>
+                                        <WYPLATY>0</WYPLATY>
+                                        <ODMOWY>0</ODMOWY>
+                                        <KWOTA_WYPLATY>0</KWOTA_WYPLATY>
+                                    </ELEMENT_ODPOWIEDZI>
+                                    <ELEMENT_ODPOWIEDZI>
+                                        <NUMER>K100119906-AC</NUMER>
+                                        <RODZAJ_POLISY>AC</RODZAJ_POLISY>
+                                        <RODZAJ_POLISY_DETAL>A</RODZAJ_POLISY_DETAL>
+                                        <KOD_ZU_WYSTAWCA>02300001</KOD_ZU_WYSTAWCA>
+                                        <KOD_ZU_ODPOWIEDZIALNY>02300001</KOD_ZU_ODPOWIEDZIALNY>
+                                        <KLASA_POJAZDU>R</KLASA_POJAZDU>
+                                        <NR_REJESTRACYJNY>${licencePlate}</NR_REJESTRACYJNY>
+                                        <NR_VIN>${vin}</NR_VIN>
+                                        <MARKA>VOLKSWAGEN</MARKA>
+                                        <RODZAJ_POJAZDU>OSOBOWY</RODZAJ_POJAZDU>
+                                        <MODEL>PASSAT B5 1.9 TDI BASIS</MODEL>
+                                        <LICZBA_WLASCICIELI>2</LICZBA_WLASCICIELI>
+                                        <OD_DNIA>2017-12-12</OD_DNIA>
+                                        <DO_DNIA>2018-09-18</DO_DNIA>
+                                        <ZDARZENIA>0</ZDARZENIA>
+                                        <SZKODY>0</SZKODY>
+                                        <WYPLATY>0</WYPLATY>
+                                        <ODMOWY>0</ODMOWY>
+                                        <KWOTA_WYPLATY>0</KWOTA_WYPLATY>
+                                    </ELEMENT_ODPOWIEDZI>
+                                </METRYCZKA>
+                            </ODPOWIEDZ_POZYTYWNA>
+                        </ODPOWIEDZ>
+                    </odp:ODPOWIEDZI>
+                </n:Value>
+            </n:ostream>
+        </n:Streams>
+    </n:pobierzHistorieUbezpieczenResult>
+</n:pobierzHistorieUbezpieczenResponse>
